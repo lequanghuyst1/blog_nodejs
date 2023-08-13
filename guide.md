@@ -16,7 +16,10 @@ start: "nodemon index.js"
 
 start: "nodemon --inspect index.js"
 
-
 ## install Morgan
 
 npm i --save-dev morgan
+
+## install express-handlebars
+
+npm install express-handlebars
