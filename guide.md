@@ -16,7 +16,7 @@ start: "nodemon index.js"
 
 start: "nodemon --inspect index.js"
 
-## install Morgan
+## install Morgan  gửi yêu cầu request
 
 npm i --save-dev morgan
 
