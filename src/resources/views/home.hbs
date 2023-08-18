@@ -3,15 +3,19 @@
         {{#each courses}}
             <div class='col-sm-6 col-lg-3'>
                 <div class='card card-course-item'>
-                    <img
-                        class='card-img-top'
-                        src='{{this.image}}'
-                        alt='Card image cap'
-                    />
+                    <a href='/course/{{this.slug}}'>
+                        <img
+                            class='card-img-top'
+                            src='{{this.image}}'
+                            alt='Card image cap'
+                        />
+                    </a>
                     <div class='card-body'>
-                        <h5 class='card-title'>{{this.name}}</h5>
-                        <p class='card-text'>{{this.desc}}</p>
-                        <a href='#' class='btn btn-primary'>Mua khóa học</a>
+                        <a href='/course/{{this.slug}}'>
+                            <h5 class='card-title'>{{this.name}}</h5>
+                            <p class='card-text'>{{this.desc}}</p>
+                            <a href='#' class='btn btn-primary'>Mua khóa học</a>
+                        </a>
                     </div>
                 </div>
             </div>
