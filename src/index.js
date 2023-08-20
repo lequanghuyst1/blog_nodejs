@@ -3,7 +3,7 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const morgan = require('morgan');
 const route = require('./routes/index');
-
+const methodOverride = require('method-override')
 const app = express();
 const db = require('./config/db');
 
@@ -18,7 +18,8 @@ app.use(
         extended: true,
     }),
 );
-//app.use(express.json());
+app.use(methodOverride('_method'))
+app.use(express.json());
 //Http logger
 //app.use(morgan('combined'));
 
@@ -27,6 +28,9 @@ app.engine(
     'hbs',
     handlebars.engine({
         extname: '.hbs',
+        helpers: {
+            sum: (a, b) => a + b,
+        },
     }),
 );
 app.set('view engine', 'hbs');
